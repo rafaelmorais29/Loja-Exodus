@@ -1,0 +1,241 @@
+/*
+  =============================
+  HEADER
+  =============================
+*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 3rem;
+  gap: 1rem;
+  background-color: var(--color-grey-8);
+}
+
+.drop {
+  animation: dropDown 0.7s ease-in-out;
+}
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-100px);
+  }
+  70% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header__title {
+  color: var(--color-grey-2);
+}
+
+.header__btn {
+  background-image: url("../assets/icons/moon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-inline: 1.3rem;
+  background-color: var(--color-grey-6);
+  border-radius: 0.3125rem;
+}
+
+.header__btn--dark-mode {
+  background-image: url("../assets/icons/sun.svg");
+}
+
+/*
+  =============================
+  GENRES
+  =============================
+*/
+
+.genres,
+.genres__title,
+.genres__list {
+  padding-block: 1rem;
+}
+
+.slide {
+  animation: slideIn 0.7s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.genres__title {
+  color: var(--color-grey-2);
+}
+
+.genres__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.56rem;
+}
+
+.genre__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.65rem 0.7rem;
+  border-radius: 0.25rem;
+  background-color: var(--color-grey-6);
+  cursor: pointer;
+
+  color: var(--color-grey-3);
+}
+
+.genre__item:hover {
+  background-color: var(--color-grey-2);
+  color: var(--color-grey-7);
+}
+
+.genre__item.active {
+  background-color: var(--color-grey-2);
+  color: var(--color-grey-7);
+}
+
+/*
+  =============================
+  PRICE
+  =============================
+*/
+.price-range__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.price-range__title {
+  padding-block: 1rem;
+  color: var(--color-grey-2);
+}
+
+.price-range__value {
+  padding-block: 1rem;
+  color: var(--color-grey-3);
+}
+
+.price-range__value--dynamic {
+  color: var(--color-brand-1);
+}
+
+/*
+  =============================
+  ALBUMS
+  =============================
+*/
+.albums {
+  margin-bottom: 10rem;
+}
+
+.albums__title {
+  color: var(--color-grey-2);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-block: 3rem;
+}
+
+.albums__list {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.album__item {
+  width: 500px;
+  max-width: 100%;
+  background-color: var(--color-grey-7);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-radius: 0.25rem;
+  transition: width ease-in-out 0.7s;
+}
+
+.album__item:hover {
+  background-color: var(--color-grey-6);
+}
+
+.album__cover-container {
+  overflow: hidden;
+}
+
+.album__cover {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+  background-position: center;
+  object-fit: cover;
+  transition: scale ease-in-out 0.7s;
+}
+
+.album__cover:hover {
+  scale: 1.1;
+}
+
+.album__details {
+  padding-inline: 1rem;
+}
+
+.album__band,
+.album__year,
+.album__genre {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-grey-3);
+}
+
+.album__band,
+.album__year {
+  padding-right: 1rem;
+}
+
+.album__name {
+  color: var(--color-grey-2);
+  padding-inline: 1rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.album__price--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.album__price {
+  color: var(--color-grey-2, #212529);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.album__buy--button {
+  border: 1px solid var(--color-brand-2);
+  background-color: var(--color-brand-2);
+  padding: 0.65rem 0.7rem;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1.125rem;
+}
+
+.album__buy--button:hover {
+  background-color: var(--color-brand-1);
+  border-color: var(--color-brand-1);
+}

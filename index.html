@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Use Exodus</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/responsive.css" />
+    <!-- SCRIPTS -->
+    <script src="./src/scripts/index.js" defer type="module"></script>
+  </head>
+  <body>
+    <header class="header container drop">
+      <h1 class="header__title title1">Exodus</h1>
+      <button class="header__btn"></button>
+    </header>
+    <main class="container">
+      <section class="genres slide">
+        <h2 class="genres__title title2">Estampa</h2>
+        <ul class="genres__list">
+          <!-- <li class="genre__item text3 active">Todos</li>
+          <li class="genre__item text3">Pop</li>
+          <li class="genre__item text3">MPB</li>
+          <li class="genre__item text3">Forró</li>
+          <li class="genre__item text3">Samba</li>
+          <li class="genre__item text3">Rap</li>
+          <li class="genre__item text3">Hip-Hop</li>
+          <li class="genre__item text3">Jazz</li>
+          <li class="genre__item text3">Rock</li>
+          <li class="genre__item text3">Reggae</li> -->
+        </ul>
+      </section>
+      <section class="price-range">
+        <div class="price-range__container">
+          <h2 class="price-range__title title2">Definir Preço</h2>
+          <h3 class="price-range__value title3">
+            Até <span class="price-range__value--dynamic">R$ 100</span>
+          </h3>
+        </div>
+        <input
+          id="input-price"
+          class="price__input-range"
+          type="range"
+          name="price"
+          min="0"
+          max="100"
+          value="100"
+        />
+      </section>
+      <section class="albums">
+        <h2 class="albums__title">Albuns Encontrados</h2>
+        <ul class="albums__list">
+          <li class="album__item">
+            <figure class="album__cover-container">
+              <img class="album__cover" src="src/assets/img/1.jpg" alt="" />
+            </figure>
+            <h3 class="album__name">Magnetite</h3>
+            <div class="album__details">
+              <span class="album__band">Scalene</span>
+              <span class="album__year">2017</span>
+              <span class="album__genre">Rock</span>
+            </div>
+            <div class="album__price--container">
+              <h3 class="album__price">R$ 70.00</h3>
+              <button class="album__buy--button">Comprar</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
